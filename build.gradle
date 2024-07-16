@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'subgrup-prop23.2'
+version = '1.0'
+
+ext {
+    javaMainClass = 'Main'
+}
+
+application {
+    mainClassName = 'prop.teclado.Main'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'prop.teclado.Main'
+    }
+}
+
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // this is just an example of importing an external library, you do not need to use it in your project
+    implementation 'com.google.code.gson:gson:2.8.9'
+    testImplementation('junit:junit:4.13.1')
+    testImplementation ('org.mockito:mockito-core:4.11.0')
+}
+
+test {
+    useJUnit()
+}
+
+javadoc {
+    destinationDir = file("${buildDir}/docs/javadoc")
+}
+
+//./gradlew clean --> borra la carpeta build
+//./gradlew compileJava --> Crea todos los .class
+//https://docs.gradle.org/current/userguide/java_plugin.html --> info para el build.gradle con java
