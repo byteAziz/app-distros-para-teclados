@@ -1,24 +1,69 @@
-# Tabla de miembros
+# Aplicación de distribuciones óptimas para teclados
 
-| Nombre miembro | Usuario GitLab      |
-| ------------------------- |---------------------|
-| Guillem Angulo Hidalgo | guillem.angulo      |
-| Tahir Muhammad Aziz | tahir.muhammad      |
-| Joan Martínez | joan.martinez.soria |
+## Descripción
 
-Useful commands:
+Este es un proyecto de una aplicación que permite calcular la distribución óptima (o una muy parecida en muy poco tiempo de ejecución) dado unos textos de un lenguaje cualquiera. Se busca que, tras analizar el lenguaje completo, la distribución de salida minimice la distancia media recorrida por el dedo al escribir un texto lógico. **Para obtener los detalles sobre el diseño, los casos de uso, la implementación de las clases y la lógica detrás de los algoritmos, consulta el archivo [documentación.pdf](documentación.pdf)**.
 
+## Funcionalidades
 
-./gradlew test: will run your unit tests.
-./gradlew run : will run your application in the environment. This is useful to test your application in the development environment.
-./gradlew jar: will create the jar inside the directory <project root>/build/libs with only the project's code. Not dependencies.
-./gradlew assembleDist: will create a .tar and a .zip (both contain the same) in the directory <project root>/build/distributions that contain
-the whole directory structure that will allow to install your project along with its dependencies in a machine without IDE (only with java 11 installed) and run it.
-./gradlew clean: will clean the compilation files and the created artifacts
+- Crear y gestionar teclados personalizados
+- Crear y gestionar lenguajes personalizados
+- Modificar lenguajes añadiendo o eliminando textos
+- Calcular la distribución óptima de un teclado
+- Definir el alfabeto completo en caso que alguna letra no aparezca en ningún texto puntualmente
+- Intercambiar posiciones de teclas en un teclado
+- Buscar y ordenar teclados
+- Visualizar detalles de los teclados
 
+## Requisitos del Sistema
 
-More info
+- Java JDK 11 o superior
 
+## Instalación
 
-Gradle application plugin
-https://docs.gradle.org/current/userguide/application_plugin.html
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/byteAziz/app-distros-para-teclados
+    ```
+2. Entra en el directorio del repositorio:
+   cd directorio-del-repositorio
+3. Ejecuta el make dependiendo de tu sistema operativo:
+    - Windows:
+        ```bash
+        Make.bat
+        ```
+    - Linux/Mac:
+        ```bash
+        Make.sh
+        ```
+4. Ejecuta la aplicación:
+    ```bash
+    java -jar EXE/tecladosprop-1.0.jar
+    ```
+5. **(Opcional)** Genera la documentación de la implementación usando javadoc:
+    - Windows:
+        ```bash
+        MakeJavadoc.bat
+        ```
+    - Linux/Mac:
+        ```bash
+        MakeJavadoc.sh
+        ```
+    Accede a la documentación abriendo el archivo index.html desde el siguiente directorio:
+    
+   ```bash
+   cd DOCS/javadoc
+   ```
+
+## Uso
+Véase el [doc-manual-usuario.pdf](doc-manual-usuario.pdf).
+
+## Tabla de miembros
+
+| Nombre miembro | Usuario GitLab |
+| -------------- | -------------- |
+| Tahir Muhammad Aziz | - |
+| Guillem Angulo Hidalgo | - |
+| Joan Martínez | - |
+
+Dado que se ha migrado de *Gitlab FIB*, no se pueden ver los commits originales ni tiene sentido poner los usuarios privados en la tabla.
